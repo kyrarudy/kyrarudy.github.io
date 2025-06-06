@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <nav>
-              <ul>
-                  <!-- <li><a style="color:white; font-size:120%;" href="/">Home</a></li> -->
-                  <li><a style="color:black; font-size:120%;" href="mailto:kyra@u.northwestern.edu">Email</a></li>
-                  <li><a style="color:black; font-size:120%;" href="https://scholar.google.com/citations?user=eyuOitoAAAAJ&hl=en">Google Scholar</a></li>
-                  <li><a class="fa fa-github" style="color:black; font-size:120%;" href="https://github.com/kyrarudy"></a></li>
-              </ul>
-            </nav>
-        </header>
-    </div>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
+        <div class="sidenav">
+          <h3><a href="/pdfs/KyraRudyResume.pdf" style="color:black">CV</a></h3>
+          <h3><a href="/teaching" style="color:black">Teaching</a></h3>
+          <h3><a href="/evaluations" style="color:black">Student Evaluations</a></h3>
+          <h3><a href="/research" style="color:black">Research</a></h3>
+          <h3><a href="/education" style="color:black">Education</a></h3>
+          <h3><a href="/publications" style="color:black">Publications & Presentations</a></h3>
+          <h3><a href="/interests" style="color:black">Hobbies & Interests</a></h3>
+
+        </div>
+
+      </header>
+      <section>
+
+      {{ content }}
+
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
+      <footer>
 
       </footer>
     </div>
-
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
